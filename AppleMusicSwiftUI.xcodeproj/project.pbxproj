@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E17B72732667A55B009DA61B /* AppleMusicSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B72722667A55B009DA61B /* AppleMusicSwiftUIApp.swift */; };
-		E17B72752667A55B009DA61B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B72742667A55B009DA61B /* ContentView.swift */; };
+		E17B72752667A55B009DA61B /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B72742667A55B009DA61B /* LibraryView.swift */; };
 		E17B72772667A55C009DA61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17B72762667A55C009DA61B /* Assets.xcassets */; };
 		E17B727A2667A55C009DA61B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17B72792667A55C009DA61B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		E17B726F2667A55B009DA61B /* AppleMusicSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17B72722667A55B009DA61B /* AppleMusicSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSwiftUIApp.swift; sourceTree = "<group>"; };
-		E17B72742667A55B009DA61B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E17B72742667A55B009DA61B /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		E17B72762667A55C009DA61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17B72792667A55C009DA61B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E17B727B2667A55C009DA61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,10 +52,9 @@
 		E17B72712667A55B009DA61B /* AppleMusicSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				E17B72722667A55B009DA61B /* AppleMusicSwiftUIApp.swift */,
-				E17B72742667A55B009DA61B /* ContentView.swift */,
-				E17B72762667A55C009DA61B /* Assets.xcassets */,
-				E17B727B2667A55C009DA61B /* Info.plist */,
+				E1F74C89266A203000C7435A /* Modules */,
+				E1F74C88266A202100C7435A /* App */,
+				E1F74C87266A200D00C7435A /* Resources */,
 				E17B72782667A55C009DA61B /* Preview Content */,
 			);
 			path = AppleMusicSwiftUI;
@@ -67,6 +66,47 @@
 				E17B72792667A55C009DA61B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1F74C87266A200D00C7435A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E17B72762667A55C009DA61B /* Assets.xcassets */,
+				E1F74C8A266A204800C7435A /* Configs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1F74C88266A202100C7435A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E17B72722667A55B009DA61B /* AppleMusicSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E1F74C89266A203000C7435A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E1F74C8B266A20E400C7435A /* Library */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E1F74C8A266A204800C7435A /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				E17B727B2667A55C009DA61B /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		E1F74C8B266A20E400C7435A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E17B72742667A55B009DA61B /* LibraryView.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17B72752667A55B009DA61B /* ContentView.swift in Sources */,
+				E17B72752667A55B009DA61B /* LibraryView.swift in Sources */,
 				E17B72732667A55B009DA61B /* AppleMusicSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +311,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppleMusicSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 5K285D3RL3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AppleMusicSwiftUI/Info.plist;
+				INFOPLIST_FILE = AppleMusicSwiftUI/Resources/Configs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +333,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppleMusicSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 5K285D3RL3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AppleMusicSwiftUI/Info.plist;
+				INFOPLIST_FILE = AppleMusicSwiftUI/Resources/Configs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
