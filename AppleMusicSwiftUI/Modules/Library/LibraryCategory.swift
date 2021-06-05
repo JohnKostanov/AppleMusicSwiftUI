@@ -10,27 +10,22 @@ import SwiftUI
 struct LibraryCategory: View {
 
     @State private var multiSelection = Set<UUID>()
-    @State private var editMode = EditMode.inactive
 
     var body: some View {
-        NavigationView {
-            List(selection: $multiSelection) {
-                ForEach(categories) { category in
-                    HStack {
-                        Image(systemName: category.image)
-                            .foregroundColor(.red)
-                        Text(category.name)
-                    }
-                    .font(.system(size: 20))
+        List(selection: $multiSelection) {
+            ForEach(categories) { category in
+                HStack {
+                    Image(systemName: category.image)
+                        .foregroundColor(.red)
+                    Text(category.name)
                 }
-                .onMove(perform: { indices, newOffset in
-                    // to do
-                })
+                .font(.system(size: 20))
             }
-            .navigationBarItems(trailing: EditButton())
-            .environment(\.editMode, $editMode)
-            
-        }
+            .onMove(perform: { indices, newOffset in
+                // to do
+            })
+        }.listStyle(InsetListStyle())
+        
     }
 }
 

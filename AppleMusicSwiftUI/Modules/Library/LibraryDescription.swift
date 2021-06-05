@@ -19,8 +19,6 @@ struct LibraryDescription: View {
         }
         .multilineTextAlignment(.center)
         .padding(.horizontal, 40)
-      
-    
     }
 }
 

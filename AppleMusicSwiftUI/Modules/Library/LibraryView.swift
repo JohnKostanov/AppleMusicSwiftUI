@@ -10,42 +10,40 @@ import SwiftUI
 struct LibraryView: View {
 
     @State private var showCategory = false
-   
-    
+    @State private var editMode = EditMode.active
+
     var body: some View {
         NavigationView {
-            if showCategory {
-                LibraryCategory()
-                    .toolbar { EditButton() }
-                    .navigationBarItems(trailing:
-                                            Button(action: {
-                                                showCategory.toggle()
-                                            }, label: {
-                                                Text("Готово")
-                                            })
-                                            .foregroundColor(.red)
-                                            .font(.system(size: 17))
-                    )
+            VStack {
+                if showCategory {
+                    LibraryCategory()
 
-                    .navigationTitle("Медиатека")
-            } else {
-                LibraryDescription()
-                    .navigationBarItems(trailing:
-                                            Button(action: {
-                                                showCategory.toggle()
-                                            }, label: {
-                                                Text("Править")
-                                            })
-                                            .foregroundColor(.red)
-                                            .font(.system(size: 17))
-                    )
-                    .navigationTitle("Медиатека")
+                } else {
+                    LibraryDescription()
+
+                }
             }
+            .navigationBarTitle("Медиатека")
+            .accentColor(.red)
+            .environment(\.editMode, .constant(showCategory ? EditMode.active : EditMode.inactive))
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                                        showCategory.toggle()
+                                    }, label: {
+                                        if showCategory {
+                                            Text("Готово")
+                                                .foregroundColor(.red)
+                                                .font(.system(size: 17))
 
+                                        } else {
+                                            Text("Править")
+                                                .foregroundColor(.red)
+                                                .font(.system(size: 17))
+                                        }
 
+                                    }))
         }
     }
-
 }
 
 struct LibraryView_Previews: PreviewProvider {
