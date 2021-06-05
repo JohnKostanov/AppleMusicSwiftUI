@@ -8,27 +8,44 @@
 import SwiftUI
 
 struct LibraryView: View {
+
+    @State private var showCategory = false
+   
+    
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Ищете свою музыку?")
-                    .font(.title.bold())
+            if showCategory {
+                LibraryCategory()
+                    .toolbar { EditButton() }
+                    .navigationBarItems(trailing:
+                                            Button(action: {
+                                                showCategory.toggle()
+                                            }, label: {
+                                                Text("Готово")
+                                            })
+                                            .foregroundColor(.red)
+                                            .font(.system(size: 17))
+                    )
 
-                Text("Здесь появится купленная Вами в iTunes Store музыка.")
-                    .font(.title3)
-                    .foregroundColor(.gray)
+                    .navigationTitle("Медиатека")
+            } else {
+                LibraryDescription()
+                    .navigationBarItems(trailing:
+                                            Button(action: {
+                                                showCategory.toggle()
+                                            }, label: {
+                                                Text("Править")
+                                            })
+                                            .foregroundColor(.red)
+                                            .font(.system(size: 17))
+                    )
+                    .navigationTitle("Медиатека")
             }
-            .multilineTextAlignment(.center)
-            .padding(.horizontal, 40)
-            .navigationTitle("Медиатека")
-            .navigationBarItems(trailing: Button("Править", action: {
-                // go list of songs
-            })
-                .foregroundColor(.red)
-                .font(.system(size: 17))
-            )
+
+
         }
     }
+
 }
 
 struct LibraryView_Previews: PreviewProvider {
