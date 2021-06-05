@@ -11,6 +11,8 @@
 		E17B72752667A55B009DA61B /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B72742667A55B009DA61B /* LibraryView.swift */; };
 		E17B72772667A55C009DA61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17B72762667A55C009DA61B /* Assets.xcassets */; };
 		E17B727A2667A55C009DA61B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17B72792667A55C009DA61B /* Preview Assets.xcassets */; };
+		E1F74C8D266A9DAA00C7435A /* LibraryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F74C8C266A9DAA00C7435A /* LibraryCategory.swift */; };
+		E1F74C8F266AADA600C7435A /* LibraryDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F74C8E266AADA600C7435A /* LibraryDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E17B72762667A55C009DA61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17B72792667A55C009DA61B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E17B727B2667A55C009DA61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1F74C8C266A9DAA00C7435A /* LibraryCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCategory.swift; sourceTree = "<group>"; };
+		E1F74C8E266AADA600C7435A /* LibraryDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				E17B72742667A55B009DA61B /* LibraryView.swift */,
+				E1F74C8C266A9DAA00C7435A /* LibraryCategory.swift */,
+				E1F74C8E266AADA600C7435A /* LibraryDescription.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F74C8F266AADA600C7435A /* LibraryDescription.swift in Sources */,
+				E1F74C8D266A9DAA00C7435A /* LibraryCategory.swift in Sources */,
 				E17B72752667A55B009DA61B /* LibraryView.swift in Sources */,
 				E17B72732667A55B009DA61B /* AppleMusicSwiftUIApp.swift in Sources */,
 			);

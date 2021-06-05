@@ -8,25 +8,40 @@
 import SwiftUI
 
 struct LibraryView: View {
+
+    @State private var showCategory = false
+    @State private var editMode = EditMode.active
+
     var body: some View {
         NavigationView {
             VStack {
-                Text("Ищете свою музыку?")
-                    .font(.title.bold())
+                if showCategory {
+                    LibraryCategory()
 
-                Text("Здесь появится купленная Вами в iTunes Store музыка.")
-                    .font(.title3)
-                    .foregroundColor(.gray)
+                } else {
+                    LibraryDescription()
+
+                }
             }
-            .multilineTextAlignment(.center)
-            .padding(.horizontal, 40)
-            .navigationTitle("Медиатека")
-            .navigationBarItems(trailing: Button("Править", action: {
-                // go list of songs
-            })
-                .foregroundColor(.red)
-                .font(.system(size: 17))
-            )
+            .navigationBarTitle("Медиатека")
+            .accentColor(.red)
+            .environment(\.editMode, .constant(showCategory ? EditMode.active : EditMode.inactive))
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                                        showCategory.toggle()
+                                    }, label: {
+                                        if showCategory {
+                                            Text("Готово")
+                                                .foregroundColor(.red)
+                                                .font(.system(size: 17))
+
+                                        } else {
+                                            Text("Править")
+                                                .foregroundColor(.red)
+                                                .font(.system(size: 17))
+                                        }
+
+                                    }))
         }
     }
 }
