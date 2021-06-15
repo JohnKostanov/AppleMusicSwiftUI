@@ -11,6 +11,10 @@
 		E17B72752667A55B009DA61B /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B72742667A55B009DA61B /* LibraryView.swift */; };
 		E17B72772667A55C009DA61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17B72762667A55C009DA61B /* Assets.xcassets */; };
 		E17B727A2667A55C009DA61B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17B72792667A55C009DA61B /* Preview Assets.xcassets */; };
+		E1827AA22678BC1F006C538E /* RadioCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1827AA12678BC1F006C538E /* RadioCategory.swift */; };
+		E1827AA42678BEA1006C538E /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1827AA32678BEA1006C538E /* StationModel.swift */; };
+		E1827AA62678C451006C538E /* RadioStationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1827AA52678C451006C538E /* RadioStationCategory.swift */; };
+		E1827AA82678C925006C538E /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1827AA72678C925006C538E /* RadioView.swift */; };
 		E1F74C8D266A9DAA00C7435A /* LibraryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F74C8C266A9DAA00C7435A /* LibraryCategory.swift */; };
 		E1F74C8F266AADA600C7435A /* LibraryDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F74C8E266AADA600C7435A /* LibraryDescription.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +26,10 @@
 		E17B72762667A55C009DA61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17B72792667A55C009DA61B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E17B727B2667A55C009DA61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1827AA12678BC1F006C538E /* RadioCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCategory.swift; sourceTree = "<group>"; };
+		E1827AA32678BEA1006C538E /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		E1827AA52678C451006C538E /* RadioStationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStationCategory.swift; sourceTree = "<group>"; };
+		E1827AA72678C925006C538E /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		E1F74C8C266A9DAA00C7435A /* LibraryCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCategory.swift; sourceTree = "<group>"; };
 		E1F74C8E266AADA600C7435A /* LibraryDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +80,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E1827AA02678BBB8006C538E /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				E1827AA32678BEA1006C538E /* StationModel.swift */,
+				E1827AA52678C451006C538E /* RadioStationCategory.swift */,
+				E1827AA12678BC1F006C538E /* RadioCategory.swift */,
+				E1827AA72678C925006C538E /* RadioView.swift */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
 		E1F74C87266A200D00C7435A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F74C8B266A20E400C7435A /* Library */,
+				E1827AA02678BBB8006C538E /* Radio */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -184,9 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1827AA22678BC1F006C538E /* RadioCategory.swift in Sources */,
 				E1F74C8F266AADA600C7435A /* LibraryDescription.swift in Sources */,
 				E1F74C8D266A9DAA00C7435A /* LibraryCategory.swift in Sources */,
 				E17B72752667A55B009DA61B /* LibraryView.swift in Sources */,
+				E1827AA82678C925006C538E /* RadioView.swift in Sources */,
+				E1827AA62678C451006C538E /* RadioStationCategory.swift in Sources */,
+				E1827AA42678BEA1006C538E /* StationModel.swift in Sources */,
 				E17B72732667A55B009DA61B /* AppleMusicSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

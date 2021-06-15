@@ -14,7 +14,7 @@ struct AppleMusicSwiftUIApp: App {
 
             TabView() {
                 LibraryView().tabItem { Label("Медиатека", systemImage: "music.note.house.fill") }.tag(1)
-                Text("Радио").tabItem { Label("Радио", systemImage: "dot.radiowaves.left.and.right") }.tag(2)
+                RadioView().tabItem { Label("Радио", systemImage: "dot.radiowaves.left.and.right") }.tag(2)
                 Text("Поиск").tabItem { Label("Поиск", systemImage: "magnifyingglass") }.tag(3)
             }
         }
